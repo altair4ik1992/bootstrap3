@@ -107,8 +107,27 @@
             <div class="row">
                 <h1>Название страницы</h1>
                 <p>
-                    <a href="#" class="btn btn-default"><i class="fa fa-spinner fa-spin"></i></a>
-                    <a href="#" class="btn btn-primary">Кнопка</a>
+                    <button
+                            type="button"
+                            class="btn btn-default"
+                            data-placement="left"
+                            data-toggle="tooltip"
+                            title="Простая подсказка"
+                            data-trigger="click"
+                    >
+                        <i class="fa fa-spinner fa-spin"></i>
+                    </button>
+                    <button
+                            type="button"
+                            class="btn btn-primary"
+                            data-placement="top"
+                            data-toggle="popover"
+                            title="Заголовок окна"
+                            data-content="Текст окна или какое-нибудь сообщение"
+                            data-trigger="hover"
+                    >
+                        Кнопка
+                    </button>
                     <a href="#" class="btn btn-success">Кнопка</a>
                     <a href="#" class="btn btn-warning">Кнопка</a>
                     <a href="#" class="btn btn-info">Кнопка</a>
@@ -339,5 +358,11 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.js"></script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+            $('[data-toggle="popover"]').popover();
+        });
+    </script>
 </body>
 </html>
